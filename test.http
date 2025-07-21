@@ -1,0 +1,7 @@
+### - Get with city
+GET http://localhost:8080/v1/weather?city=melbourne
+
+### - Get without city (default melbourne)
+GET http://localhost:8080/v1/weather
+
+###

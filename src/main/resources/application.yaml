@@ -2,5 +2,19 @@ spring:
   application:
     name: zai-weather
 
+server:
+  port: 8080
+
 app:
+  default-city: melbourne
+  api:
+    main:
+      url:  https://api.weatherstack.com
+      api-key: <insert-api-key>
+    backup:
+      url: https://api.openweathermap.org/data/2.5
+      api-key: <insert-api-key>
+    cache-time: 3
+    retry: 3
+
   
