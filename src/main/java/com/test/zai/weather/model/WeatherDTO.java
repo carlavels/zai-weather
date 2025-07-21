@@ -14,8 +14,8 @@ import lombok.NoArgsConstructor;
 public class WeatherDTO {
     
     @JsonProperty(value = "wind_speed")
-    private String windSpeed;
+    private Integer windSpeed;
 
     @JsonProperty(value = "temperature_degrees")
-    private String temperatureDegrees;
+    private Integer temperatureDegrees;
 }

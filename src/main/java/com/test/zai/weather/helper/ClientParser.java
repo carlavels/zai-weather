@@ -20,8 +20,8 @@ public class ClientParser {
             var windSpeed = current.get("wind_speed").toString();
 
             return WeatherDTO.builder()
-                .temperatureDegrees(temp)
-                .windSpeed(windSpeed)
+                .temperatureDegrees(Integer.parseInt(temp))
+                .windSpeed(Integer.parseInt(windSpeed))
                 .build();
         } catch(Exception e) {
             log.error("Unable to parse response from main API: {}", e);
@@ -40,8 +40,8 @@ public class ClientParser {
             var windSpeed = wind.get("speed").toString();
 
             return WeatherDTO.builder()
-                .temperatureDegrees(temp)
-                .windSpeed(windSpeed)
+                .temperatureDegrees(Integer.parseInt(temp))
+                .windSpeed(Integer.parseInt(windSpeed))
                 .build();
         } catch(Exception e) {
             log.error("Unable to parse response from backup API: {}", e);
