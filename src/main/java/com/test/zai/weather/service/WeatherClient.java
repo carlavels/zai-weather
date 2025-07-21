@@ -35,16 +35,15 @@ public class WeatherClient {
             }
         }
 
-        for(int i = 0; i < maxRetry; i++) {
-            try {
-                resp = callBackupAPI();
-                if (Objects.nonNull(resp)) {
-                    return resp;
-                }
-            } catch(Exception e) {
-                log.error("Exception encountered when calling backup API: ", e.getMessage());
-                throw new RuntimeException("Unable to retrieve weather data");
+        try {
+            log.info("Trying Backup API...");
+            resp = callBackupAPI();
+            if (Objects.nonNull(resp)) {
+                return resp;
             }
+        } catch(Exception e) {
+            log.error("Exception encountered when calling backup API: ", e.getMessage());
+            throw new RuntimeException("Unable to retrieve weather data");
         }
 
         return resp;

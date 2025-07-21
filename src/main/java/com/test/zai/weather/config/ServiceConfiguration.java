@@ -16,20 +16,6 @@ import com.test.zai.weather.service.WeatherService;
 
 @Configuration
 public class ServiceConfiguration {
-    
-    @Bean
-    public RestClient mainClient(
-        RestClient.Builder builder,
-        @Value("${app.api.main.url}") String url) {
-        return builder.baseUrl(url).build();
-    }
-
-    @Bean
-    public RestClient backupClient(
-        RestClient.Builder builder,
-        @Value("${app.api.backup.url}") String url) {
-        return builder.baseUrl(url).build();
-    }
 
     @Bean
     public WeatherClient weatherClient(
