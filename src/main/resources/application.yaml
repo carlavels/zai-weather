@@ -10,10 +10,10 @@ app:
   api:
     main:
       url:  https://api.weatherstack.com
-      api-key: <insert-api-key>
+      api-key: f202bb6e8dce0b8cde97507042d6fcc1
     backup:
       url: https://api.openweathermap.org/data/2.5
-      api-key: <insert-api-key>
+      api-key: 2f2c1a7d3717d4c69602c75c28853143
     cache-time: 3
     retry: 3
 
